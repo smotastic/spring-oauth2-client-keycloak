@@ -1,0 +1,21 @@
+package de.smotastic.demooauth2keycloak;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@SpringBootApplication
+@RestController
+public class DemoOauth2KeycloakApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(DemoOauth2KeycloakApplication.class, args);
+	}
+	
+	@GetMapping("/ping")
+	public String ping() {
+		return "hello";
+	}
+
+}
